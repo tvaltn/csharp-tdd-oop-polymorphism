@@ -7,7 +7,7 @@
 
 ## Set up instructions
 - Fork this repository and clone the forked version to your machine
-- Open the project in Visual Studio
+- Open the tdd-oop-polymorphism.sln in Visual Studio
 
 ## Introduction
 
