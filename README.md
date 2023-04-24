@@ -7,7 +7,7 @@
 
 ## Set up instructions
 - Fork this repository and clone the forked version to your machine
-- Open the root directory of the project in IntelliJ
+- Open the project in Visual Studio
 
 ## Introduction
 
@@ -15,7 +15,7 @@ Polymorphism is the ability to use different classes in the same way. You were a
 
 Here's a class that moves a car a certain number of meters:
 
-```java
+```C#
 class Mover {
     public void move(Car car, int meters) {
         car.accelerate(200);
@@ -25,7 +25,7 @@ class Mover {
 
 If we want to reuse this class for different means of travel, we'd probably have to do something like the below, right?
 
-```java
+```C#
 class Mover {
     public void move(Car car, int meters) {
         car.accelerate(200);
@@ -43,7 +43,7 @@ class Mover {
 
 This code is not polymorphic. It's performing the same sort of logic on different classes but requires a different implementation for each of them. Using an interface, we could vastly improve this code to a single method:
 
-```java
+```C#
 interface Vehicle {
     void move(int meters);
 }
@@ -59,16 +59,16 @@ As long as our `Car`, `Plane` and `Skateboard` all implement the `Vehicle` inter
 
 To demonstrate its true power, consider something that you will have encountered in earlier exercises:
 
-```java
+```C#
 class Program {
     public static void main() {
-        List<int> favouriteNumbers = new List<int>();
-        Map<Character, Integer> letterScores = new HashMap<>();
+        ICollection<int> favouriteNumbers = new List<int>();
+        IDictionary<Char, int> letterScores = new HashMap<>();
     }
 }
 ```
 
-Both `List` and `Map` are interfaces, `ArrayList` and `HashMap` are specific concrete implementations of those interfaces. There are different types of lists and maps, but they all share the same methods! Some have more methods than are defined on the interface they implement, but they all *at least* have the methods defined on the interface.
+Both `ICollection` and `IDictionary` are interfaces, `List` and `Dictionary` are specific concrete implementations of those interfaces. There are different types of lists and maps, but they all share the same methods! Some have more methods than are defined on the interface they implement, but they all *at least* have the methods defined on the interface.
 
 ## Exercise
 
