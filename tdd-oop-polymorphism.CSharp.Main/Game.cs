@@ -8,10 +8,10 @@ namespace tdd_oop_polymorphism.CSharp.Main
 {
     public class Game
     {
-        String name;
+        string name;
         int price;
 
-        public Game(String name, int price)
+        public Game(string name, int price)
         {
             this.name = name;
             this.price = price;
@@ -22,7 +22,7 @@ namespace tdd_oop_polymorphism.CSharp.Main
             return this.price;
         }
 
-        public String getName()
+        public string getName()
         {
             return this.name;
         }
